@@ -16,4 +16,4 @@
 4. [PPT作品集](https://.baidu.com)
 
 ---
-> "Stay hungry, stay foolish." - Steve Jobs
+> "在哪里跌倒，就在哪里躺下睡一觉。" - 土豆大魔王
