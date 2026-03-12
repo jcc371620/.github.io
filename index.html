@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shijie Chen | Personal Space</title>
     <style>
-        /* 基础样式保持黑白极简 */
+        /* 保持你的黑白极简样式 */
         body {
             background-color: #000;
             color: #fff;
@@ -16,21 +16,13 @@
             margin: 0 auto;
         }
         
-        /* 导航栏样式 */
         nav { margin-bottom: 40px; }
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            color: #888;
-            transition: 0.3s;
-        }
+        nav a { margin-right: 20px; text-decoration: none; font-size: 0.9rem; color: #888; transition: 0.3s; }
         nav a:hover { color: #fff; }
 
         h1 { font-size: 3rem; font-weight: 800; margin-bottom: 0; }
         .subtitle { color: #666; margin-bottom: 40px; }
 
-        /* 项目卡片核心样式 */
         .project-card {
             display: block;
             text-decoration: none !important;
@@ -46,32 +38,16 @@
         .project-card:hover {
             transform: translateY(-5px); 
             border-color: #fff;            
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05); 
             background-color: #0a0a0a;        
         }
 
         .project-card h4 { margin: 0 0 8px 0; font-size: 1.2rem; }
         .project-card p { margin: 0; font-size: 0.9rem; color: #888; }
 
-        /* 技术标签样式 */
-        .tag-container {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .tag {
-            font-size: 10px;
-            color: #666; 
-            background: #111; 
-            padding: 2px 10px;
-            border-radius: 4px;
-            border: 1px solid #222;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+        .tag-container { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { font-size: 10px; color: #666; background: #111; padding: 2px 10px; border-radius: 4px; border: 1px solid #222; text-transform: uppercase; }
 
-        /* 密码输入框提示样式 */
+        /* 密码弹窗样式 */
         #password-overlay {
             display: none;
             position: fixed;
@@ -81,33 +57,11 @@
             justify-content: center;
             align-items: center;
         }
-        .password-box {
-            background: #111;
-            padding: 30px;
-            border: 1px solid #333;
-            text-align: center;
-            border-radius: 8px;
-        }
-        .password-box input {
-            background: #000;
-            border: 1px solid #444;
-            color: #fff;
-            padding: 10px;
-            margin: 15px 0;
-            width: 200px;
-            outline: none;
-        }
-        .password-box button {
-            background: #fff;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+        .password-box { background: #111; padding: 30px; border: 1px solid #333; text-align: center; border-radius: 8px; }
+        .password-box input { background: #000; border: 1px solid #444; color: #fff; padding: 10px; margin: 15px 0; width: 200px; }
+        .password-box button { background: #fff; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; }
 
         .footer { margin-top: 80px; font-size: 0.8rem; color: #444; border-top: 1px solid #222; padding-top: 20px; }
-        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
@@ -134,7 +88,7 @@
     <p class="subtitle">Shanghai | PwC AC Shanghai | Quality Assurance | Business Analyst</p>
 
     <div class="content">
-        <p>欢迎来到我的个人网站。作为 BA 与 QA 专家，我致力于通过数据驱动的分析与自动化的测试方案提升业务价值。你可以查看我的 <a href="#projects" style="color: #fff;">项目作品集</a> 了解更多。</p>
+        <p>欢迎来到我的个人网站。作为 BA 与 QA 专家，我致力于通过数据驱动的分析与自动化的测试方案提升业务价值。</p>
         
         <h3 id="projects" style="margin-top: 40px; border-bottom: 1px solid #222; padding-bottom: 10px;">Projects</h3>
         
@@ -154,6 +108,38 @@
             </div>
         </a>
 
+        <a href="#" class="project-card">
+            <h4>Power BI 作品集 <small style="color: #666; font-weight: normal;">(BI Analytics)</small></h4>
+            <p>针对快消行业销量的多维数据看板，通过动态可视化识别核心增长驱动力。</p>
+            <div class="tag-container">
+                <span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">SQL</span>
+            </div>
+        </a>
+
+        <a href="#" class="project-card">
+            <h4>draw.io 开源架构建模 <small style="color: #666; font-weight: normal;">(Open Source Modeling)</small></h4>
+            <p>利用开源工具构建高标准业务流图，支持跨团队协作的数字化流程资产管理。</p>
+            <div class="tag-container">
+                <span class="tag">Workflow</span><span class="tag">Architecture</span><span class="tag">Open Source</span>
+            </div>
+        </a>
+
+        <a href="#" class="project-card">
+            <h4>Figma 作品集 <small style="color: #666; font-weight: normal;">(UI/UX Design)</small></h4>
+            <p>遵循 Ant Design 规范的 B 端系统设计，包含高保真交互模拟。</p>
+            <div class="tag-container">
+                <span class="tag">UI/UX</span><span class="tag">Ant Design</span>
+            </div>
+        </a>
+
+        <a href="#" class="project-card">
+            <h4>Axure 作品集 <small style="color: #666; font-weight: normal;">(Interactive Prototyping)</small></h4>
+            <p>高保真业务系统原型，涵盖复杂逻辑交互与用户路径梳理。</p>
+            <div class="tag-container">
+                <span class="tag">Prototyping</span><span class="tag">Logic</span>
+            </div>
+        </a>
+
         <div onclick="openOverlay()" class="project-card">
             <h4>Xmind 逻辑看板 <small style="color: #666; font-weight: normal;">(Business Logic)</small></h4>
             <p>通过思维导图进行深度业务解构，确保需求分析的逻辑完整性。</p>
@@ -169,26 +155,20 @@
     </div>
 
     <script>
-        function openOverlay() {
-            document.getElementById('password-overlay').style.display = 'flex';
-        }
-
-        function closeOverlay() {
+        function openOverlay() { document.getElementById('password-overlay').style.display = 'flex'; }
+        function closeOverlay() { 
             document.getElementById('password-overlay').style.display = 'none';
             document.getElementById('error-msg').innerText = '';
         }
-
         function checkPassword() {
             var pw = document.getElementById('pw-input').value;
-            // 请在此处修改你的密码，当前设为 3716
             if (pw === '8888888888') {
-                // 跳转地址请根据你的实际路径调整
-                window.location.href = "https://jcc371620.github.io/Assets/B2B.pdf";
+                // 注意：请确保 Assets/B2B.pdf 路径和大小写正确
+                window.location.href = "./Assets/B2B.pdf";
             } else {
                 document.getElementById('error-msg').innerText = '密码错误，请联系作者获取。';
             }
         }
     </script>
-
 </body>
 </html>
