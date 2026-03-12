@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shijie Chen | Personal Space</title>
     <style>
-        /* 基础样式保持黑白 */
+        /* 基础样式保持黑白极简 */
         body {
             background-color: #000;
             color: #fff;
@@ -16,7 +16,7 @@
             margin: 0 auto;
         }
         
-        /* 导航栏链接样式 */
+        /* 导航栏样式 */
         nav { margin-bottom: 40px; }
         nav a {
             margin-right: 20px;
@@ -30,17 +30,10 @@
         h1 { font-size: 3rem; font-weight: 800; margin-bottom: 0; }
         .subtitle { color: #666; margin-bottom: 40px; }
 
-        /* 内容区正文链接 */
-        .content a {
-            color: #fff;
-            text-underline-offset: 4px;
-        }
-        .content a:hover { color: #888; }
-
-        /* 项目卡片样式优化 */
+        /* 项目卡片核心样式 */
         .project-card {
             display: block;
-            text-decoration: none !important; /* 核心：去掉整块卡片的下划线 */
+            text-decoration: none !important; /* 强制移除所有下划线 */
             color: inherit;
             padding: 24px;
             margin-bottom: 20px;
@@ -50,28 +43,31 @@
             background-color: #000;
         }
 
-        /* 悬停效果 */
         .project-card:hover {
             transform: translateY(-5px); 
-            border-color: #fff;           
+            border-color: #fff;            
             box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05); 
-            background-color: #0a0a0a;       
+            background-color: #0a0a0a;        
+        }
+
+        /* 确保内部文字没有任何修饰 */
+        .project-card h4, .project-card p, .project-card span {
+            text-decoration: none !important;
+            border-bottom: none !important;
         }
 
         .project-card h4 { 
             margin: 0 0 8px 0; 
             font-size: 1.2rem;
-            text-decoration: none !important; /* 确保标题没有下划线 */
         }
 
         .project-card p {
             margin: 0; 
             font-size: 0.9rem; 
             color: #888;
-            text-decoration: none !important; /* 确保描述没有下划线 */
         }
 
-        /* 灰色技术标签样式 */
+        /* 技术标签样式 */
         .tag-container {
             margin-top: 15px;
             display: flex;
@@ -90,8 +86,6 @@
         }
 
         .footer { margin-top: 80px; font-size: 0.8rem; color: #444; border-top: 1px solid #222; padding-top: 20px; }
-        
-        /* 平滑滚动 */
         html { scroll-behavior: smooth; }
     </style>
 </head>
@@ -108,10 +102,18 @@
     <p class="subtitle">Shanghai | PwC AC Shanghai | Quality Assurance | Business Analyst</p>
 
     <div class="content">
-        <p>欢迎来到我的个人网站，我将陆续上传自己的学习成果。你可以通过 <a href="https://github.com/jcc371620" target="_blank">GitHub</a> 关注我的动态，或者查看我的 <a href="#projects">项目作品集</a>。</p>
+        <p>欢迎来到我的个人网站。作为 BA 与 QA 专家，我致力于通过数据驱动的分析与自动化的测试方案提升业务价值。你可以查看我的 <a href="#projects" style="color: #fff;">项目作品集</a> 了解更多。</p>
         
         <h3 id="projects" style="margin-top: 40px; border-bottom: 1px solid #222; padding-bottom: 10px;">Projects</h3>
         
+        <a href="#" class="project-card">
+            <h4>Salesforce 业务系统管理 <small style="color: #666; font-weight: normal;">(CRM & Cloud Solutions)</small></h4>
+            <p>基于 Salesforce 生态的客户关系管理方案，涵盖 O2O 全渠道数据整合与销售漏斗自动化追踪。</p>
+            <div class="tag-container">
+                <span class="tag">CRM</span><span class="tag">Sales Cloud</span><span class="tag">Data Management</span>
+            </div>
+        </a>
+
         <a href="https://github.com/jcc371620/Automation-Projects" class="project-card" target="_blank">
             <h4>自动化脚本 <small style="color: #666; font-weight: normal;">(Test Automation / Scripting)</small></h4>
             <p>基于 Selenium 的端到端自动化方案，集成持续部署流水线，显著提升回归测试效率。</p>
@@ -120,58 +122,50 @@
             </div>
         </a>
 
-        <a href="#" class="project-card" target="_blank">
-            <h4>Figma 作品集 <small style="color: #666; font-weight: normal;">(UI/UX Design)</small></h4>
-            <p>遵循 Ant Design 规范的 B 端系统设计，包含原子化组件库搭建与高保真交互模拟。</p>
-            <div class="tag-container">
-                <span class="tag">UI/UX</span><span class="tag">Component Library</span><span class="tag">Ant Design</span>
-            </div>
-        </a>
-
         <a href="#" class="project-card">
             <h4>Power BI 作品集 <small style="color: #666; font-weight: normal;">(BI Analytics)</small></h4>
-            <p>基于多维数据建模的交互式看板，通过动态可视化分析业务趋势，驱动决策支持。</p>
+            <p>针对快消行业销量的多维数据看板，通过动态可视化识别核心增长驱动力。</p>
             <div class="tag-container">
                 <span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">SQL</span>
             </div>
         </a>
-        
-        <a href="#" class="project-card" target="_blank">
-            <h4>Tableau 作品集 <small style="color: #666; font-weight: normal;">(Data Visualization)</small></h4>
-            <p>利用 LOD 表达式与复杂参数构建商业智能仪表盘，实现千万级数据的实时下钻分析。</p>
+
+        <a href="#" class="project-card">
+            <h4>draw.io 开源架构建模 <small style="color: #666; font-weight: normal;">(Open Source Modeling)</small></h4>
+            <p>利用开源工具构建高标准业务流图，支持跨团队协作的数字化流程资产管理。</p>
             <div class="tag-container">
-                <span class="tag">LOD Expressions</span><span class="tag">Visual Analytics</span>
+                <span class="tag">Workflow</span><span class="tag">Architecture</span><span class="tag">Open Source</span>
             </div>
         </a>
 
-        <a href="#" class="project-card" target="_blank">
+        <a href="#" class="project-card">
+            <h4>Figma 作品集 <small style="color: #666; font-weight: normal;">(UI/UX Design)</small></h4>
+            <p>遵循 Ant Design 规范的 B 端系统设计，包含高保真交互模拟。</p>
+            <div class="tag-container">
+                <span class="tag">UI/UX</span><span class="tag">Ant Design</span>
+            </div>
+        </a>
+
+        <a href="#" class="project-card">
             <h4>Axure 作品集 <small style="color: #666; font-weight: normal;">(Interactive Prototyping)</small></h4>
-            <p>高保真业务系统原型设计，涵盖复杂逻辑交互与用户路径梳理，提升需求转化效率。</p>
+            <p>高保真业务系统原型，涵盖复杂逻辑交互与用户路径梳理。</p>
             <div class="tag-container">
-                <span class="tag">Prototyping</span><span class="tag">User Flow</span><span class="tag">Logic</span>
+                <span class="tag">Prototyping</span><span class="tag">Logic</span>
             </div>
         </a>
 
-        <a href="#" class="project-card" target="_blank">
+        <a href="#" class="project-card">
             <h4>Xmind 逻辑看板 <small style="color: #666; font-weight: normal;">(Business Logic)</small></h4>
-            <p>深度业务逻辑解构与产品架构规划，通过思维导图确保需求分析的逻辑完整性。</p>
+            <p>通过思维导图进行深度业务解构，确保需求分析的逻辑完整性。</p>
             <div class="tag-container">
-                <span class="tag">Logic Mapping</span><span class="tag">Structure Analysis</span>
-            </div>
-        </a>
-
-        <a href="#" class="project-card" target="_blank">
-            <h4>Visio 流程建模 <small style="color: #666; font-weight: normal;">(Process Modeling)</small></h4>
-            <p>遵循 BPMN 2.0 标准梳理跨部门协作路径，识别流程冗余并提供数字化优化方案。</p>
-            <div class="tag-container">
-                <span class="tag">BPMN 2.0</span><span class="tag">Swimlane</span><span class="tag">Workflow</span>
+                <span class="tag">Logic Mapping</span>
             </div>
         </a>
         
     </div>
 
     <div class="footer">
-        © 2026 陈诗洁 | Built with Passion.
+        © 2026 陈诗洁 | Built with Passion for Excellence.
     </div>
 
 </body>
